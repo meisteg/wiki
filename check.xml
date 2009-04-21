@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<update_information>
+  <module>
+    <title>Wiki</title>
+    <changes>
+        Support new mod_rewrite method introduced in phpWebSite 1.5.0.
+    </changes>
+    <version>1.1.1</version>
+    <md5sum>9059cf6dd60323c4acdc31e8f950dec4</md5sum>
+    <download>http://sourceforge.net/project/showfiles.php?group_id=81360&amp;package_id=83570&amp;release_id=304364</download>
+    <dependency>
+      <module>
+        <title>core</title>
+        <properName>phpWebSite Core</properName>
+        <version>1.5.0</version>
+        <url>http://phpwebsite.appstate.edu/downloads/modules/base/</url>
+      </module>
+      <module>
+        <title>notes</title>
+        <properName>Notes</properName>
+        <version>0.1.0</version>
+        <url>http://phpwebsite.appstate.edu/downloads/modules/notes/</url>
+      </module>
+      <module>
+        <title>search</title>
+        <properName>Search</properName>
+        <version>0.2.0</version>
+        <url>http://phpwebsite.appstate.edu/downloads/modules/search</url>
+      </module>
+      <module>
+        <title>users</title>
+        <properName>Users</properName>
+        <version>2.3.2</version>
+        <url>http://phpwebsite.appstate.edu/downloads/modules/users</url>
+      </module>
+    </dependency>
+  </module>
+</update_information>
