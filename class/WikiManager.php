@@ -168,6 +168,7 @@ class WikiManager
         }
 
         $wikitext = PHPWS_Text::fixAnchors($wikitext);
+        $wikitext = str_replace('%23', '#', $wikitext);
 
         return PHPWS_Text::parseTag($wikitext);
     }// END FUNC transform

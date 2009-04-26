@@ -4,7 +4,8 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
-    BUG #2: Table of Contents anchor fix.
+    BUG #1: Fix anchor links.  (Thanks Matt!)
+    BUG #2: Table of Contents anchor fix.  (Thanks Matt!)
 
 *wiki-1.1.1 (29 Mar 2008)
 
