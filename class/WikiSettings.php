@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: WikiSettings.php,v 1.15 2008/01/03 17:18:43 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class WikiSettings {
@@ -28,7 +28,7 @@ class WikiSettings {
     /**
      * Settings Administration
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function admin()
     {
@@ -223,7 +223,7 @@ class WikiSettings {
     /**
      * Save new settings
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function save()
     {

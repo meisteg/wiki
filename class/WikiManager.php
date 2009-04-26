@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: WikiManager.php,v 1.69 2008/03/29 20:01:55 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class WikiManager
@@ -61,7 +61,7 @@ class WikiManager
     /**
      * Transform text using Wiki library
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function transform($wikitext)
     {
@@ -176,7 +176,7 @@ class WikiManager
     /**
      * Format the wiki title text
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function formatTitle($title)
     {
@@ -190,7 +190,7 @@ class WikiManager
     /**
      * Sends email to Wiki Admin if option enabled
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function sendEmail()
     {
@@ -217,7 +217,7 @@ class WikiManager
     /**
      * Image upload
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function imageUpload()
     {
@@ -275,7 +275,7 @@ class WikiManager
     /**
      * Recent Changes
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function recentChanges()
     {
@@ -305,7 +305,7 @@ class WikiManager
     /**
      * Gets random page from the database
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function random()
     {
@@ -325,7 +325,7 @@ class WikiManager
     /**
      * Adds wiki links to the MiniAdmin box
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function addToMiniAdmin()
     {
@@ -381,7 +381,7 @@ class WikiManager
     /**
      * Action
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function action()
     {

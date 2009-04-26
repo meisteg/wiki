@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: OldWikiPage.php,v 1.28 2008/03/29 20:01:55 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class OldWikiPage

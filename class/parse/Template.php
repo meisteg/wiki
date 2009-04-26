@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: Template.php,v 1.3 2006/11/05 17:07:10 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class Text_Wiki_Parse_Template extends Text_Wiki_Parse

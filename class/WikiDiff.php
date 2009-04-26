@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: WikiDiff.php,v 1.9 2007/05/28 19:00:16 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 require_once 'Text/Diff.php';
@@ -35,7 +35,7 @@ class WikiDiff extends Text_Diff_Renderer
     /**
      * Constructor
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function WikiDiff($format='two_col', $lines=3)
     {
@@ -49,7 +49,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Main function: Calls the diff and render, then outputs to layout
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function diff($oVer, $nVer)
     {
@@ -105,7 +105,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * This is used to inform the user what lines they are looking at
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _blockHeader($xbeg, $xlen, $ybeg, $ylen)
     {
@@ -137,7 +137,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Prepares the lines for output
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _lines($lines, $template)
     {
@@ -161,7 +161,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Handles the output of the context lines
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _context($lines)
     {
@@ -174,7 +174,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Handles the output of the added lines
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _added($lines)
     {
@@ -187,7 +187,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Handles the output of the deleted lines
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _deleted($lines)
     {
@@ -200,7 +200,7 @@ class WikiDiff extends Text_Diff_Renderer
      *
      * Handles the output of the changed lines
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function _changed($orig, $final)
     {

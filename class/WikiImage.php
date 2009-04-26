@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: WikiImage.php,v 1.10 2008/03/29 20:01:55 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class WikiImage
@@ -165,7 +165,7 @@ class WikiImage
     /**
      * Add image form
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function add()
     {
@@ -188,7 +188,7 @@ class WikiImage
     /**
      * Save
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function save()
     {
@@ -248,7 +248,7 @@ class WikiImage
     /**
      * Delete
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function delete()
     {

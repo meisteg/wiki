@@ -1,11 +1,11 @@
 # ChangeLog for wiki
-# $Id: ChangeLog,v 1.46 2008/03/29 20:01:56 blindman1344 Exp $
 
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
     BUG #1: Fix anchor links.  (Thanks Matt!)
     BUG #2: Table of Contents anchor fix.  (Thanks Matt!)
+    RFE #5: Replace references to SourceForge with GitHub.
 
 *wiki-1.1.1 (29 Mar 2008)
 

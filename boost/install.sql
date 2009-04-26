@@ -1,5 +1,3 @@
--- $Id: install.sql,v 1.21 2006/08/15 03:51:27 blindman1344 Exp $
-
 CREATE TABLE wiki_pages (
   id int NOT NULL default '0',
   key_id int NOT NULL default '0',

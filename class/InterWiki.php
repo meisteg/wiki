@@ -19,8 +19,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @author      Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
- * $Id: InterWiki.php,v 1.11 2007/05/28 19:00:16 blindman1344 Exp $
+ * @package Wiki
+ * @author Greg Meiste <greg.meiste+github@gmail.com>
  */
 
 class InterWiki
@@ -125,7 +125,7 @@ class InterWiki
     /**
      * Add interwiki link form
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function add()
     {
@@ -153,7 +153,7 @@ class InterWiki
     /**
      * Edit interwiki link form
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function edit()
     {
@@ -182,7 +182,7 @@ class InterWiki
     /**
      * Save
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function save($do_post=TRUE)
     {
@@ -220,7 +220,7 @@ class InterWiki
     /**
      * Delete the Interwiki
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function kill()
     {
@@ -283,7 +283,7 @@ class InterWiki
     /**
      * Interwiki Setup
      *
-     * @author Greg Meiste <blindman1344@NOSPAM.users.sourceforge.net>
+     * @author Greg Meiste <greg.meiste+github@gmail.com>
      */
     function setup()
     {
