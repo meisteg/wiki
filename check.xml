@@ -3,11 +3,11 @@
   <module>
     <title>Wiki</title>
     <changes>
-        Support new mod_rewrite method introduced in phpWebSite 1.5.0.
+        Fixed issues with anchors and the TOC. (Thanks Matt!)
     </changes>
-    <version>1.1.1</version>
-    <md5sum>9059cf6dd60323c4acdc31e8f950dec4</md5sum>
-    <download>http://sourceforge.net/project/showfiles.php?group_id=81360&amp;package_id=83570&amp;release_id=304364</download>
+    <version>1.1.2</version>
+    <md5sum>b6c530cd704fc2de90dff92315e760f0</md5sum>
+    <download>http://github.com/meisteg/wiki/tarball/v1.1.2</download>
     <dependency>
       <module>
         <title>core</title>
