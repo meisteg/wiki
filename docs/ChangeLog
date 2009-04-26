@@ -3,6 +3,8 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
+*wiki-1.1.2 (26 Apr 2009)
+
     BUG #1: Fix anchor links.  (Thanks Matt!)
     BUG #2: Table of Contents anchor fix.  (Thanks Matt!)
     RFE #5: Replace references to SourceForge with GitHub.

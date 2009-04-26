@@ -33,6 +33,9 @@ function wiki_update(&$content, $currentVersion)
 
         case version_compare($currentVersion, '1.1.1', '<'):
             $content[] = '- Support new mod_rewrite method introduced in phpWebSite 1.5.0.';
+
+        case version_compare($currentVersion, '1.1.2', '<'):
+            $content[] = '- Fixed issues with anchors and the TOC. (Thanks Matt!)';
     }
 
     return TRUE;

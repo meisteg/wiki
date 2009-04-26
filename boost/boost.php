@@ -24,13 +24,13 @@
  */
 
 $proper_name  = 'Wiki';
-$version      = '1.1.1';
+$version      = '1.1.2';
 $register     = FALSE;
 $unregister   = FALSE;
 $import_sql   = TRUE;
 $image_dir    = TRUE;
 $file_dir     = FALSE;
-$version_http = 'http://www.meiste.com/phpws_updates/wiki.xml';
+$version_http = 'http://meisteg.github.com/wiki/check.xml';
 $about        = TRUE;
 $priority     = 50;
 $dependency   = TRUE;

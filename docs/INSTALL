@@ -36,16 +36,6 @@ installing Wiki for phpWebSite.
 
    The module is now installed.
 
-6. If your site is no longer behaving like normal, try uncommenting the
-   following line in config/core/config.php of your phpWebSite install:
-
-   ini_set('memory_limit', '10M');
-
-   The Text_Wiki library that this module relies on uses quite a bit of
-   memory and uncommenting the above line will allow phpWebSite to use
-   more memory.  If you don't give phpWebSite enough memory to use, it
-   will not work properly (or at all).
-
 
 ===== UPGRADING FROM WIKI 0.x.x =====
 
