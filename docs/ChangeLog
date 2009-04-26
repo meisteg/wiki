@@ -4,6 +4,8 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
+    BUG #2: Table of Contents anchor fix.
+
 *wiki-1.1.1 (29 Mar 2008)
 
     Support new mod_rewrite method introduced in phpWebSite 1.5.0.

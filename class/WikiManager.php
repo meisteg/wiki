@@ -167,6 +167,8 @@ class WikiManager
             $wikitext = PHPWS_Text::bb2html($wikitext, 'wiki');
         }
 
+        $wikitext = PHPWS_Text::fixAnchors($wikitext);
+
         return PHPWS_Text::parseTag($wikitext);
     }// END FUNC transform
 
