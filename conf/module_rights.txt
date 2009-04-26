@@ -1,0 +1,5 @@
+edit_page::Add/Edit Pages
+delete_page::Delete Pages
+toggle_lock::Toggle Page Locks
+upload_images::Upload Images
+edit_settings::Edit Settings

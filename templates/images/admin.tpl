@@ -1,0 +1,18 @@
+{BACK}
+
+<h3>{IMAGE_UPLOAD_LABEL}</h3>
+
+<!-- BEGIN MESSAGE -->
+<h4>{MESSAGE}</h4>
+<!-- END MESSAGE -->
+
+{START_FORM}
+{FILENAME_LABEL}: {FILENAME}<br />
+{SUMMARY_LABEL}: {SUMMARY}<br /><br />
+
+{SAVE}
+{END_FORM}
+
+<hr />
+
+{IMAGE_LIST}

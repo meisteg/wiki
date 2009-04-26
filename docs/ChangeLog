@@ -1,0 +1,103 @@
+# ChangeLog for wiki
+# $Id: ChangeLog,v 1.35 2006/06/15 02:23:52 blindman1344 Exp $
+
+
+*wiki-0.6.1 (15 Oct 2006)
+
+    15 Oct 2006; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    BUG #1551721: Fixed PHP Notice with search.
+
+*wiki-0.6.0 (14 Jun 2006)
+
+    04 Mar 2006; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1243732: Added template feature.  Usage: {{Template:WikiPage}}
+
+    26 Feb 2006; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1438866: Added support for additional parsers.  See conf/config.php
+
+    12 Feb 2006; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Several design changes made to improve module memory usage.
+
+*wiki-0.5.0 (22 Nov 2005)
+
+    21 Nov 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1361874: Added menu_item.tpl to remove hardcoded vertical bar in menus.
+
+    20 Nov 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1285544: Added discussion feature (Comments module required)
+
+    19 Nov 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1153528: Option to format wiki page names before displaying.
+    RFE #1361074: Do not force page menu to be at top of page. (Template change)
+    RFE #1361876: Ability to switch off certain menu items.
+
+    29 Oct 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Tweaked the diff template to fix an alignment issue.
+
+*wiki-0.4.1 (28 Oct 2005)
+
+    27 Oct 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    BUG #1330614: Diff text now parsed to prevent profanity and ugliness caused
+                  by stray HTML tags in the wikitext.
+
+    21 Oct 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Worked on templates to make them XHTML Strict compliant.
+
+    17 Oct 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    BUG #1318868: Apostrophes no longer display as &#39; in phpWebSite 0.10.2
+
+*wiki-0.4.0 (06 Aug 2005)
+
+    05 Aug 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1240502: Added ability to toggle adding wiki page title to site title
+    RFE #1240621: Added ability to toggle showing page modified info
+
+    31 Jul 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1166723: Can now set the external link target
+
+    25 Jul 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1113333: Interwiki support added
+
+*wiki-0.3.0 (22 Jul 2005)
+
+    19 Jul 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1114496: "Move pages" feature added
+
+    17 Jul 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1159611: "Recent changes" feature added
+    Can now send notes to editors.  Requires Notes module to use.
+    Random page ability added.
+
+    16 Jul 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1112965: Allow for version diffs.  Requires Text_Diff library.
+    Added Wiki Toolbox to get more real estate for links
+    RFE #1159610: "What links here" feature added
+
+*wiki-0.2.0 (27 Apr 2005)
+
+    20 Apr 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1164716: Added option to grant all registered users edit permissions
+
+    03 Apr 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1166613: Orphaned pages detection modification
+
+    02 Apr 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    RFE #1115813: Image upload
+    RFE #1115214: Pages can now be locked from editing
+    Made page restore more secure
+
+    31 Mar 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Changed to @import when style.css is in theme or when hub site  (Thanks Mike)
+
+    10 Mar 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    BUG #1159608: Umlauts now work for wikilinks.  Requires version 1.0.0RC2 of
+                  Text_Wiki library.
+    RFE #1156991: BBCode support added.  Must be enabled in wiki settings.
+
+*wiki-0.1.0 (12 Feb 2005)
+
+    12 Feb 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Development and testing done.  Releasing first stable version.
+
+    14 Jan 2005; Greg Meiste <blindman1344 [at] users dot sourceforge dot net>
+    Starting development

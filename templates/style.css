@@ -1,0 +1,35 @@
+blockquote.wiki {
+    border: 1px solid silver;
+    background: #eee;
+    margin: 4px;
+    padding: 4px 12px;
+}
+
+pre.wiki {
+    border: 1px dashed #036;
+    background: #eee;
+    padding: 6pt;
+    font-family: ProFont, Monaco, Courier, "Andale Mono", monotype;
+    font-size: 9pt;
+}
+
+table.wiki {
+    border-spacing: 0px;
+    border: 1px solid gray;
+}
+
+tr.wiki {
+}
+
+th.wiki {
+    margin: 1px;
+    border: 1px solid silver;
+    padding: 4px;
+    font-weight: bold;
+}
+
+td.wiki {
+    margin: 1px;
+    border: 1px solid silver;
+    padding: 4px;
+}

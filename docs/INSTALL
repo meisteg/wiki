@@ -1,0 +1,83 @@
+# Wiki for phpWebSite Install Procedure
+# $Id: INSTALL,v 1.13 2006/06/15 02:23:52 blindman1344 Exp $
+
+
+IMPORTANT NOTE #1: This is a module for phpWebSite.  You have to install
+phpWebSite >= 0.10.0 first as the module will not work with earlier
+versions of phpWebSite.  If you don't have phpWebSite installed, first
+get the code here:
+
+https://sourceforge.net/project/showfiles.php?group_id=15539
+
+Then follow the install instructions found in the INSTALL.txt included
+in the docs directory of that download.
+
+(phpWebSite 1.x.x is not supported at this time.  Support will be added in
+a future release.)
+
+
+IMPORTANT NOTE #2: Wiki for phpWebSite has a dependency on additional
+PEAR libraries.  These libraries were not included in the phpWebSite
+distribution until 0.10.2.  If you are running phpWebSite 0.10.0 or 0.10.1,
+the libraries can be downloaded from:
+
+http://pear.php.net/package/Text_Wiki
+http://pear.php.net/package/Text_Diff
+
+The packaged "Text" directory needs to be placed in your phpWebSite home
+directory under /lib/pear/ or in your main pear directory.  Please note
+that this module now requires version 1.0.0RC2 or higher of the Text_Wiki
+library and version 0.0.5 or higher of the Text_Diff library.  Other versions
+will cause unexpected results.
+
+
+Once this is done then you can start installing Wiki for phpWebSite:
+
+1. Download the .tar.gz from a sourceforge mirror.  (There is also a .zip
+   file for Windows users.)
+
+2. Unpack the tarball with:
+    tar -xvzf module-wiki-*.tar.gz
+
+3. Move the new directory into your phpWebSite mod directory.
+
+    Example: If your phpWebSite directory is /home/httpd/htdocs, you
+    would run:
+
+    mv wiki /home/httpd/htdocs/mod/wiki
+
+4. If you haven't already done so, you should uncomment the following line
+   in core/Core.php of your phpWebSite install:
+
+   ini_set('memory_limit', '16M');
+
+   The Text_Wiki library that this module relies on uses quite a bit of
+   memory and uncommenting the above line will allow phpWebSite to use
+   more memory.  If you don't give phpWebSite enough memory to use, it
+   will not work properly (or at all).
+
+5. Go to your web site and install/update Wiki from Boost.
+
+6. (optional) In the phpWebSite conf directory, open the textSettings.php
+   file for editing.  Add <code> to the $allowed_tags list.  This will
+   allow code blocks in the Wiki (as well as the rest of your web site).
+
+7. (optional) Wiki for phpWebSite has added an entry into Menu Manager.
+   You need to go into the Menu Manager control panel and select the Menu
+   that you would like to add the Wiki link to (or create a new menu).
+   Once you are in the menu editing screen click on the "Add Module
+   Default" button.  On the resulting page select the "Wiki" item from
+   the drop-down box and add it.
+
+8. (optional) Wiki for phpWebSite supports sending notes to editors.  If
+   you wish to use this feature, install the Notes module (version 1.6.0
+   or later) from Boost if it is not installed already. The Notes module
+   is included in the full version of phpWebSite.
+
+   You are golden.  Wiki for phpWebSite is now installed.
+
+
+If you are having trouble with these procedures please file a Support
+Request at our sourceforge.net project site:
+
+http://sourceforge.net/tracker/?atid=716466&group_id=81360&func=browse
