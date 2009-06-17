@@ -115,6 +115,7 @@ class WikiManager
         if (PHPWS_Settings::get('wiki', 'ext_chars_support'))
         {
             $wiki->setParseConf('Wikilink', 'ext_chars', true);
+            $wiki->setFormatConf('Xhtml', 'translate', HTML_SPECIALCHARS);
         }
 
         // Setting CSS styles for tags

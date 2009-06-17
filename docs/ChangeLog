@@ -3,6 +3,8 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
+    BUG #6: Skandinavian letters (see http://pear.php.net/bugs/bug.php?id=3881)
+
 *wiki-1.1.2 (26 Apr 2009)
 
     BUG #1: Fix anchor links.  (Thanks Matt!)
