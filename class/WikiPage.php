@@ -542,7 +542,6 @@ class WikiPage
 
     function history()
     {
-        PHPWS_Core::initModClass('help', 'Help.php');
         PHPWS_Core::initModClass('wiki', 'OldWikiPage.php');
         PHPWS_Core::initCoreClass('DBPager.php');
 
@@ -557,7 +556,7 @@ class WikiPage
         $tags['UPDATED']  = dgettext('wiki', 'Updated');
         $tags['EDITOR']   = dgettext('wiki', 'Editor');
         $tags['COMMENT']  = dgettext('wiki', 'Comment');
-        $tags['DIFF']     = PHPWS_Help::show_link('wiki', 'diff', dgettext('wiki', 'Compare To'));
+        $tags['DIFF']     = dgettext('wiki', 'Compare To');
         $tags['ACTIONS']  = dgettext('wiki', 'Actions');
 
         $pager = new DBPager('wiki_pages_version', 'OldWikiPage');

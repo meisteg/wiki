@@ -38,7 +38,7 @@ class WikiSettings {
             return;
         }
 
-        PHPWS_Core::initModClass('help', 'Help.php');
+        javascript('jquery');
         PHPWS_Core::initModClass('wiki', 'WikiPage.php');
         PHPWS_Core::initCoreClass('DBPager.php');
 
@@ -50,100 +50,155 @@ class WikiSettings {
         $tabs = 1;
         $form = new PHPWS_Form;
 
+        $msg = dgettext('wiki', 'Enabling this setting will show the default wiki page on the home page of the web site.');
         $form->addCheck('show_on_home');
         $form->setMatch('show_on_home', PHPWS_Settings::get('wiki', 'show_on_home'));
-        $form->addTplTag('SHOW_ON_HOME_LABEL',
-                         PHPWS_Help::show_link('wiki', 'show_on_home', dgettext('wiki', 'Show on home page')));
+        $form->addTplTag('SHOW_ON_HOME_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Show on home page'),
+                                                          'id' => 'show_on_home_info',
+                                                          'message' => $msg)));
         $form->setTab('show_on_home', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will allow all visitors to view the wiki.
+                                 When disabled, only registered users can view the wiki.');
         $form->addCheck('allow_anon_view');
         $form->setMatch('allow_anon_view', PHPWS_Settings::get('wiki', 'allow_anon_view'));
-        $form->addTplTag('ALLOW_ANON_VIEW_LABEL',
-                         PHPWS_Help::show_link('wiki', 'allow_anon_view', dgettext('wiki', 'Allow Anonymous Viewing')));
+        $form->addTplTag('ALLOW_ANON_VIEW_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Allow anonymous viewing'),
+                                                             'id' => 'allow_anon_view_info',
+                                                             'message' => $msg)));
         $form->setTab('allow_anon_view', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will allow all registered users to edit pages.  When disabled, only
+                                 registered users with admin privileges can edit pages. Anonymous visitors can never edit pages.');
         $form->addCheck('allow_page_edit');
         $form->setMatch('allow_page_edit', PHPWS_Settings::get('wiki', 'allow_page_edit'));
-        $form->addTplTag('ALLOW_PAGE_EDIT_LABEL',
-                         PHPWS_Help::show_link('wiki', 'allow_page_edit',
-                         dgettext('wiki', 'Allow all registered users to edit pages')));
+        $form->addTplTag('ALLOW_PAGE_EDIT_LABEL', javascript('slider', array('link' => dgettext('wiki',
+                                                                                                'Allow all registered users to edit pages'),
+                                                             'id' => 'allow_page_edit_info',
+                                                             'message' => $msg)));
         $form->setTab('allow_page_edit', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will allow all registered users to upload images.  When disabled, only
+                                 registered users with admin privileges can upload images.  Anonymous visitors can never upload images.');
         $form->addCheck('allow_image_upload');
         $form->setMatch('allow_image_upload', PHPWS_Settings::get('wiki', 'allow_image_upload'));
-        $form->addTplTag('ALLOW_IMAGE_UPLOAD_LABEL',
-                         PHPWS_Help::show_link('wiki', 'allow_image_upload',
-                         dgettext('wiki', 'Allow all registered users to upload images')));
+        $form->addTplTag('ALLOW_IMAGE_UPLOAD_LABEL', javascript('slider',
+                                                                array('link' => dgettext('wiki',
+                                                                                         'Allow all registered users to upload images'),
+                                                                'id' => 'allow_image_upload_info',
+                                                                'message' => $msg)));
         $form->setTab('allow_image_upload', $tabs++);
 
+        $msg = dgettext('wiki', 'When enabled, the page text will also be parsed by the BBCode parser instead of just the Text_Wiki
+                                 parser. Keep in mind that everything you can do with BBCode can be done with wikitax.');
         $form->addCheck('allow_bbcode');
         $form->setMatch('allow_bbcode', PHPWS_Settings::get('wiki', 'allow_bbcode'));
-        $form->addTplTag('ALLOW_BBCODE_LABEL',
-                         PHPWS_Help::show_link('wiki', 'allow_bbcode', dgettext('wiki', 'Enable BBCode parser')));
+        $form->addTplTag('ALLOW_BBCODE_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Enable BBCode parser'),
+                                                          'id' => 'allow_bbcode_info',
+                                                          'message' => $msg)));
         $form->setTab('allow_bbcode', $tabs++);
 
+        $msg = dgettext('wiki', 'When enabled, the extended character set will be supported for wiki page names.  For example,
+                                 German umlauts would be allowed in a wiki page name.');
         $form->addCheck('ext_chars_support');
         $form->setMatch('ext_chars_support', PHPWS_Settings::get('wiki', 'ext_chars_support'));
-        $form->addTplTag('EXT_CHARS_SUPPORT_LABEL',
-                         PHPWS_Help::show_link('wiki', 'ext_chars_support',
-                         dgettext('wiki', 'Enable extended character set for wiki page names')));
+        $form->addTplTag('EXT_CHARS_SUPPORT_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Enable extended character set'),
+                                                               'id' => 'ext_chars_support_info',
+                                                               'message' => $msg)));
         $form->setTab('ext_chars_support', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will add the current wiki page title to the site title which appears in the
+                                 browser title bar.  The site title is sometimes used in themes meaning this setting would add the
+                                 wiki page title to the theme as well.');
         $form->addCheck('add_to_title');
         $form->setMatch('add_to_title', PHPWS_Settings::get('wiki', 'add_to_title'));
-        $form->addTplTag('ADD_TO_TITLE_LABEL',
-                         PHPWS_Help::show_link('wiki', 'add_to_title', dgettext('wiki', 'Add wiki page title to site title')));
+        $form->addTplTag('ADD_TO_TITLE_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Add wiki page title to site title'),
+                                                          'id' => 'add_to_title_info',
+                                                          'message' => $msg)));
         $form->setTab('add_to_title', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will format the current wiki page title before being displayed anywhere
+                                 (excluding the wiki page text) by the module.  The page title in the page text will have to be formatted
+                                 manually if you do not like the standard WordsSmashedTogether default. The automatic formatting by the
+                                 module will add spaces to the WikiPageTitle, making it Wiki Page Title.<br /><br />Remember, you will
+                                 still have to refer to the page as WikiPageTitle in the page text, but you can change its appearance by
+                                 using [WikiPageTitle Your Formatted Title Here].<br /><br />If this is confusing to you or others, it is
+                                 recommended to not use this feature.');
         $form->addCheck('format_title');
         $form->setMatch('format_title', PHPWS_Settings::get('wiki', 'format_title'));
-        $form->addTplTag('FORMAT_TITLE_LABEL',
-                         PHPWS_Help::show_link('wiki', 'format_title',
-                         dgettext('wiki', 'Format the wiki page title before displaying')));
+        $form->addTplTag('FORMAT_TITLE_LABEL', javascript('slider', array('link' => dgettext('wiki',
+                                                                                             'Format the wiki page title before displaying'),
+                                                          'id' => 'format_title_info',
+                                                          'message' => $msg)));
         $form->setTab('format_title', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will show the <b>Last modified by</b> information on each wiki page. However,
+                                 if UPDATED_INFO tag is not in the view template, the information will never show up, regardless of how
+                                 this option is set.');
         $form->addCheck('show_modified_info');
         $form->setMatch('show_modified_info', PHPWS_Settings::get('wiki', 'show_modified_info'));
-        $form->addTplTag('SHOW_MODIFIED_INFO_LABEL',
-                         PHPWS_Help::show_link('wiki', 'show_modified_info', dgettext('wiki', 'Show page modified information')));
+        $form->addTplTag('SHOW_MODIFIED_INFO_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Show page modified information'),
+                                                                'id' => 'show_modified_info_info',
+                                                                'message' => $msg)));
         $form->setTab('show_modified_info', $tabs++);
 
+        $msg = dgettext('wiki', 'By default, when comparing two page revisions, the changes will be presented in a two column format.
+                                 On fixed width layouts this could cause excessive horizontal scrolling.  Setting this option will change
+                                 the comparison to a single column format.');
         $form->addCheck('diff_type');
         $form->setMatch('diff_type', (PHPWS_Settings::get('wiki', 'diff_type') == 'one_col'));
-        $form->addTplTag('DIFF_TYPE_LABEL',
-                         PHPWS_Help::show_link('wiki', 'diff_type', dgettext('wiki', 'Use single column diff')));
+        $form->addTplTag('DIFF_TYPE_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Use single column diff'),
+                                                       'id' => 'diff_type_info',
+                                                       'message' => $msg)));
         $form->setTab('diff_type', $tabs++);
 
+        $msg = dgettext('wiki', 'Enabling this setting will email a notification to the Wiki Administrator email address on every page edit.');
         $form->addCheck('monitor_edits');
         $form->setMatch('monitor_edits', PHPWS_Settings::get('wiki', 'monitor_edits'));
-        $form->addTplTag('MONITOR_EDITS_LABEL',
-                         PHPWS_Help::show_link('wiki', 'monitor_edits', dgettext('wiki', 'Monitor Edits')));
+        $form->addTplTag('MONITOR_EDITS_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Monitor Edits'),
+                                                           'id' => 'monitor_edits_info',
+                                                           'message' => $msg)));
         $form->setTab('monitor_edits', $tabs++);
 
+        $msg = dgettext('wiki', 'Enter in the email address of the Wiki administrator.  If this field is left blank or has an invalid email
+                                 address, then the change will be ignored.');
         $form->addText('admin_email', PHPWS_Settings::get('wiki', 'admin_email'));
         $form->setSize('admin_email', 25);
-        $form->addTplTag('ADMIN_EMAIL_LABEL',
-                         PHPWS_Help::show_link('wiki', 'admin_email', dgettext('wiki', 'Wiki Admin Email')));
+        $form->addTplTag('ADMIN_EMAIL_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Wiki Admin Email'),
+                                                         'id' => 'admin_email_info',
+                                                         'message' => $msg)));
         $form->setTab('admin_email', $tabs++);
 
+        $msg = dgettext('wiki', 'This is the body text of the email sent when wiki pages are edited.  HTML will be stripped out as the email
+                                 will be sent as Plain Text.  You can use variables [page] and [url] to represent the name of the wiki page
+                                 and the url to view the page, respectively.');
         $form->addTextArea('email_text', PHPWS_Settings::get('wiki', 'email_text'));
         $form->setWidth('email_text', '80%');
         $form->setRows('email_text', 5);
-        $form->addTplTag('EMAIL_TEXT_LABEL',
-                         PHPWS_Help::show_link('wiki', 'email_text', dgettext('wiki', 'Email Notification Text')));
+        $form->addTplTag('EMAIL_TEXT_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Email Notification Text'),
+                                                        'id' => 'email_text_info',
+                                                        'message' => $msg)));
         $form->setTab('email_text', $tabs++);
 
+        $msg = dgettext('wiki', 'The default page to display when no instructions are passed to the Wiki module.');
         $form->addText('default_page', PHPWS_Settings::get('wiki', 'default_page'));
         $form->setSize('default_page', 25, 100);
-        $form->addTplTag('DEFAULT_PAGE_LABEL',
-                         PHPWS_Help::show_link('wiki', 'default_page', dgettext('wiki', 'Default page')));
+        $form->addTplTag('DEFAULT_PAGE_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Default page'),
+                                                          'id' => 'default_page_info',
+                                                          'message' => $msg)));
         $form->setTab('default_page', $tabs++);
 
+        $msg = dgettext('wiki', 'This controls where external pages will appear. _blank opens the new page in a new window. _parent is
+                                 used in the situation where a frameset file is nested inside another frameset file. A link in one of
+                                 the inner frameset documents which uses _parent will load the new page where the inner frameset file had
+                                 been. If the current page\'s frameset file does not have any parent, then _parent works exactly like
+                                 _top - the new document is loaded in the full window. _self puts the new page in the same window and
+                                 frame as the current page.');
         $options = array('_blank'=>'_blank', '_parent'=>'_parent', '_self'=>'_self', '_top'=>'_top');
         $form->addSelect('ext_page_target', $options);
         $form->setMatch('ext_page_target', PHPWS_Settings::get('wiki', 'ext_page_target'));
-        $form->addTplTag('EXT_PAGE_TARGET_LABEL',
-                         PHPWS_Help::show_link('wiki', 'ext_page_target', dgettext('wiki', 'Target for external links')));
+        $form->addTplTag('EXT_PAGE_TARGET_LABEL', javascript('slider', array('link' => dgettext('wiki', 'Target for external links'),
+                                                             'id' => 'ext_page_target_info',
+                                                             'message' => $msg)));
         $form->setTab('ext_page_target', $tabs++);
 
         $form->addCheck('immutable_page');
@@ -195,15 +250,15 @@ class WikiSettings {
         $tags = $form->getTemplate();
         $tags['BACK'] = PHPWS_Text::moduleLink(dgettext('wiki', 'Back to Wiki'), 'wiki');
         $tags['MESSAGE']        = WikiManager::getMessage();
-        $tags['MENU_ITEMS_LABEL'] = PHPWS_Help::show_link('wiki', 'menu_items', dgettext('wiki', 'Menu Items'));
-        $tags['DISCUSSION_SECTION_LABEL'] = PHPWS_Help::show_link('wiki', 'discussion', dgettext('wiki', 'Discussion'));
+        $tags['MENU_ITEMS_LABEL'] = dgettext('wiki', 'Menu Items');
+        $tags['DISCUSSION_SECTION_LABEL'] = dgettext('wiki', 'Discussion');
         $tags['SETTINGS_LABEL'] = dgettext('wiki', 'Settings');
         $tags['PAGES_LABEL']    = dgettext('wiki', 'Wiki Pages');
         $tags['TITLE']          = dgettext('wiki', 'Page Name');
         $tags['UPDATED']        = dgettext('wiki', 'Updated');
         $tags['VERSION']        = dgettext('wiki', 'Version');
         $tags['HITS']           = dgettext('wiki', 'Hits');
-        $tags['ORPHANED']       = PHPWS_Help::show_link('wiki', 'orphaned_pages', dgettext('wiki', 'Orphaned'));
+        $tags['ORPHANED']       = dgettext('wiki', 'Orphaned');
         $tags['ACTIONS']        = dgettext('wiki', 'Actions');
 
         $pager = new DBPager('wiki_pages', 'WikiPage');

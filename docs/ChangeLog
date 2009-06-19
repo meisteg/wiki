@@ -3,7 +3,8 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
-    BUG #6: Skandinavian letters (see http://pear.php.net/bugs/bug.php?id=3881)
+    BUG #7: Removed references to broken help module.
+    BUG #6: Fix Skandinavian letters support. (see http://bit.ly/2OyZYe)
 
 *wiki-1.1.2 (26 Apr 2009)
 

@@ -3,8 +3,8 @@
 
 ===== IMPORTANT =====
 
-This version of Wiki for phpWebSite requires phpWebSite 1.2.0 or higher. You
-have to install phpWebSite >= 1.2.0 first - earlier versions of phpWebSite
+This version of Wiki for phpWebSite requires phpWebSite 1.6.0 or higher. You
+have to install phpWebSite >= 1.6.0 first - earlier versions of phpWebSite
 will not work. If you are running phpWebSite 0.10.x, grab the latest 0.x.x
 version of this module.
 
