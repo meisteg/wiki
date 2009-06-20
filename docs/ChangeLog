@@ -3,6 +3,7 @@
 
 ========================== PHPWEBSITE 1.X.X RELEASES ==========================
 
+    RFE #8: Use PHPWS_LIST_TOGGLE_CLASS and cacheQueries() for DBPager.
     BUG #7: Removed references to broken help module.
     BUG #6: Fix Skandinavian letters support. (see http://bit.ly/2OyZYe)
 

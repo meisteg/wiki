@@ -264,11 +264,12 @@ class WikiSettings {
         $pager = new DBPager('wiki_pages', 'WikiPage');
         $pager->setModule('wiki');
         $pager->setTemplate('admin.tpl');
-        $pager->addToggle(' class="bgcolor1"');
+        $pager->addToggle(PHPWS_LIST_TOGGLE_CLASS);
         $pager->addPageTags($tags);
         $pager->addRowTags('getTpl');
         $pager->setSearch('title', 'pagetext');
         $pager->setDefaultOrder('title', 'asc');
+        $pager->cacheQueries();
 
         $template['TITLE'] = dgettext('wiki', 'Wiki Administration');
         $template['CONTENT'] = $pager->get();

@@ -330,11 +330,12 @@ class InterWiki
         $pager = new DBPager('wiki_interwiki', 'InterWiki');
         $pager->setModule('wiki');
         $pager->setTemplate('interwiki/setup.tpl');
-        $pager->addToggle(' class="bgcolor1"');
+        $pager->addToggle(PHPWS_LIST_TOGGLE_CLASS);
         $pager->addPageTags($tags);
         $pager->addRowTags('getTpl');
         $pager->setSearch('label');
         $pager->setDefaultOrder('label', 'asc');
+        $pager->cacheQueries();
 
         $template['TITLE'] = dgettext('wiki', 'Interwiki Setup');
         $template['CONTENT'] = $pager->get();

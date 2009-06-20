@@ -562,7 +562,7 @@ class WikiPage
         $pager = new DBPager('wiki_pages_version', 'OldWikiPage');
         $pager->setModule('wiki');
         $pager->setTemplate('history/list.tpl');
-        $pager->addToggle(' class="bgcolor1"');
+        $pager->addToggle(PHPWS_LIST_TOGGLE_CLASS);
         $pager->addPageTags($tags);
         $pager->addRowTags('getHistoryTpl');
         $pager->addWhere('source_id', $this->getId());

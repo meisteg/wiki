@@ -267,6 +267,7 @@ class WikiManager
         $pager->setSearch('filename', 'summary');
         $pager->setDefaultOrder('filename', 'asc');
         $pager->setEmptyMessage(dgettext('wiki', 'No images found.'));
+        $pager->cacheQueries();
 
         $template['TITLE'] = dgettext('wiki', 'Wiki Images');
         $template['CONTENT'] = $pager->get();
