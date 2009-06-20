@@ -24,7 +24,7 @@
  */
 
 $proper_name  = 'Wiki';
-$version      = '1.1.2';
+$version      = '1.1.3';
 $register     = FALSE;
 $unregister   = FALSE;
 $import_sql   = TRUE;

@@ -36,6 +36,11 @@ function wiki_update(&$content, $currentVersion)
 
         case version_compare($currentVersion, '1.1.2', '<'):
             $content[] = '- Fixed issues with anchors and the TOC. (Thanks Matt!)';
+
+        case version_compare($currentVersion, '1.1.3', '<'):
+            $content[] = '- Fix Skandinavian letters support.';
+            $content[] = '- Removed references to broken help module.';
+            $content[] = '- Use PHPWS_LIST_TOGGLE_CLASS and cacheQueries() for DBPager.';
     }
 
     return TRUE;
